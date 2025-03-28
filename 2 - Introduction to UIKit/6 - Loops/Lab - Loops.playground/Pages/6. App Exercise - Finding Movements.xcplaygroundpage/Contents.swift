@@ -8,10 +8,24 @@
 
  Loop through `movementHeartRates` below and if the heart rate doesn't fall between `lowHR` and `highHR`, continue to the next movement and heart rate. Otherwise, print "You could go <INSERT MOVEMENT HERE>."
  */
-let lowHR = 110
-let highHR = 125
-var movementHeartRates: [String: Int] = ["Walking": 85, "Running": 120, "Swimming": 130, "Cycling": 128, "Skiing": 114, "Climbing": 129]
+let movementHeartRates: [String: Int] = [
+    "Walking": 85,
+    "Running": 120,
+    "Swimming": 130,
+    "Cycling": 128,
+    "Skiing": 114,
+    "Climbing": 129
+]
 
+let lowHR = 100
+let highHR = 130
+
+for (movement, heartRate) in movementHeartRates {
+
+    if heartRate >= lowHR && heartRate <= highHR {
+        print("You could go \(movement).")
+    }
+}
 
 /*:
  _Copyright © 2021 Apple Inc._

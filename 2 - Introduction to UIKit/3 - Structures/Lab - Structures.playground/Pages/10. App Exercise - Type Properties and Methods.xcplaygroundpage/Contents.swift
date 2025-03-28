@@ -10,15 +10,30 @@
  Call the method from outside of the struct and print the result to ensure that it works properly.
  */
 struct RunningWorkout {
-    var distance: Double
-    var time: Double
-    var elevation: Double
+    var distanceInMeters: Double
+    var timeInSeconds: Double
+
+    static let metersInFeet = 3.28084
+    static let milesInMeters = 1600.0
+    
+    static func mileTimeFor(distance: Double, time: Double) -> Double {
+        let miles = 1600.0
+        let distanceInMiles = distance / miles
+        let averageMileTime = time / distanceInMiles
+        return averageMileTime
+    }
 }
 
+let distance = 5000.0
+let time = 1800.0
 
+let requiredMileTime = RunningWorkout.mileTimeFor(distance: distance, time: time)
+
+print("To cover \(distance) meters in \(time) seconds, your average mile time needs to be \(requiredMileTime) seconds.")
 
 //:  It may be helpful to have a few type properties on `RunningWorkout` representing unit conversions (i.e. meters to mile, feet to meters, etc.). Go back and add a type property for `meterInFeet` and assign it 3.28084. Then add a type property for `mileInMeters` and assign it 1600.0. Print both of these values below.
-
+print("Meters in Feet: \(RunningWorkout.metersInFeet)")
+print("Miles in Meters: \(RunningWorkout.milesInMeters)")
 
 /*:
  _Copyright © 2021 Apple Inc._
