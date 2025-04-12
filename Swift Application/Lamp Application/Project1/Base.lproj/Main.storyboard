@@ -17,17 +17,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSx-vN-ijr">
-                                <rect key="frame" x="149.66666666666666" y="409" width="93.666666666666657" height="34.333333333333314"/>
+                                <rect key="frame" x="142" y="409" width="109.33333333333331" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ON / OFF"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Press Me :)">
+                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="btn_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bdr-dg-V9l"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash Light Application" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM8-Zk-h3q">
-                                <rect key="frame" x="110" y="359" width="173" height="21"/>
+                                <rect key="frame" x="110" y="89" width="173" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prem Vishwanath Patil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPr-qZ-zOl">
+                                <rect key="frame" x="80" y="793.33333333333337" width="233" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -35,14 +43,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QSx-vN-ijr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5w6-By-5Tg"/>
+                            <constraint firstItem="bPr-qZ-zOl" firstAttribute="top" secondItem="QSx-vN-ijr" secondAttribute="bottom" constant="350" id="7fg-Le-LuP"/>
                             <constraint firstItem="QSx-vN-ijr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cgd-Nu-cRO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bPr-qZ-zOl" secondAttribute="trailing" constant="80" id="Ghn-e1-c3m"/>
                             <constraint firstItem="uM8-Zk-h3q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="J8Y-2J-MHz"/>
-                            <constraint firstItem="uM8-Zk-h3q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="NoI-6F-jqC"/>
+                            <constraint firstItem="uM8-Zk-h3q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="K7C-fB-sVh"/>
+                            <constraint firstItem="bPr-qZ-zOl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="fsb-B8-xPU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uM8-Zk-h3q" secondAttribute="trailing" constant="110" id="msp-wl-4AI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btn_on_of" destination="QSx-vN-ijr" id="jMz-Oi-wEm"/>
+                        <outlet property="txt_Prempatil" destination="bPr-qZ-zOl" id="ZK9-bh-4rf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,8 +66,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
